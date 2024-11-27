@@ -30,5 +30,11 @@ const FilterComponent = ()=> {
     onChange={(e)=> setSearchTerm(e.target.value)}
     placeholder="Search..."
     />
+    useEffect(() => {
+        const filtered = data.filter(item =>
+            item.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+        setFilteredData(filtered);
+    }, [searchTerm, data]);
 }
 export default FilterComponent;
