@@ -1,8 +1,14 @@
+import React from 'react'
+import './App.css';
 import { useState } from 'react'
+import FilterComponent from './FilterComponent'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  return (
+    <div className= "App">
+      <FilterComponent/>
+    </div>
+  )
 }
 
 export default App
