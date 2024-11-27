@@ -22,5 +22,13 @@ const FilterComponent = ()=> {
         setData(fetchData);
         setFilteredData(fetchData);
     }, []);
+
+
+    <input
+    type="text"
+    value={searchTerm}
+    onChange={(e)=> setSearchTerm(e.target.value)}
+    placeholder="Search..."
+    />
 }
 export default FilterComponent;
